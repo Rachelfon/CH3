@@ -132,17 +132,30 @@
                                                               <block type="robot_delay" id="64" inline="true">
                                                                 <value name="DELAY">
                                                                   <block type="math_number" id="111">
-                                                                    <field name="NUM">3500</field>
+                                                                    <field name="NUM">2000</field>
                                                                   </block>
                                                                 </value>
                                                                 <next>
-                                                                  <block type="variables_set" id="35" inline="true">
-                                                                    <field name="VAR">Direction</field>
-                                                                    <value name="VALUE">
-                                                                      <block type="math_number" id="36">
-                                                                        <field name="NUM">2</field>
+                                                                  <block type="movement_right" id="143">
+                                                                    <next>
+                                                                      <block type="robot_delay" id="145" inline="true">
+                                                                        <value name="DELAY">
+                                                                          <block type="math_number" id="159">
+                                                                            <field name="NUM">1400</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="variables_set" id="35" inline="true">
+                                                                            <field name="VAR">Direction</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="math_number" id="36">
+                                                                                <field name="NUM">2</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
                                                                       </block>
-                                                                    </value>
+                                                                    </next>
                                                                   </block>
                                                                 </next>
                                                               </block>
@@ -228,7 +241,7 @@
                                             <field name="OP">EQ</field>
                                             <value name="A">
                                               <block type="sensor_object" id="52">
-                                                <field name="OBJECT">LEFTSIDE</field>
+                                                <field name="OBJECT">RIGHTFRONT</field>
                                               </block>
                                             </value>
                                             <value name="B">
@@ -244,7 +257,7 @@
                                               <block type="robot_delay" id="55" inline="true">
                                                 <value name="DELAY">
                                                   <block type="math_number" id="56">
-                                                    <field name="NUM">1000</field>
+                                                    <field name="NUM">1500</field>
                                                   </block>
                                                 </value>
                                                 <next>
@@ -262,17 +275,30 @@
                                                               <block type="robot_delay" id="113" inline="true">
                                                                 <value name="DELAY">
                                                                   <block type="math_number" id="132">
-                                                                    <field name="NUM">3000</field>
+                                                                    <field name="NUM">2000</field>
                                                                   </block>
                                                                 </value>
                                                                 <next>
-                                                                  <block type="variables_set" id="61" inline="true">
-                                                                    <field name="VAR">Direction</field>
-                                                                    <value name="VALUE">
-                                                                      <block type="math_number" id="62">
-                                                                        <field name="NUM">0</field>
+                                                                  <block type="movement_left" id="178">
+                                                                    <next>
+                                                                      <block type="robot_delay" id="180" inline="true">
+                                                                        <value name="DELAY">
+                                                                          <block type="math_number" id="187">
+                                                                            <field name="NUM">1400</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="variables_set" id="61" inline="true">
+                                                                            <field name="VAR">Direction</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="math_number" id="62">
+                                                                                <field name="NUM">0</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </next>
                                                                       </block>
-                                                                    </value>
+                                                                    </next>
                                                                   </block>
                                                                 </next>
                                                               </block>
