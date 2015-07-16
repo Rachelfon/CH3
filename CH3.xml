@@ -27,125 +27,201 @@
               </block>
             </value>
             <next>
-              <block type="variables_set" id="129" inline="true">
-                <field name="VAR">Direction</field>
-                <value name="VALUE">
-                  <block type="math_number" id="157">
-                    <field name="NUM">0</field>
+              <block type="controls_if" id="8" inline="false">
+                <value name="IF0">
+                  <block type="logic_compare" id="10" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="11">
+                        <field name="VAR">A</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="12">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
                   </block>
                 </value>
+                <statement name="DO0">
+                  <block type="movement_right" id="16">
+                    <next>
+                      <block type="robot_delay" id="17" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="18">
+                            <field name="NUM">1400</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_forward" id="19">
+                            <next>
+                              <block type="controls_whileUntil" id="20" inline="false">
+                                <field name="MODE">WHILE</field>
+                                <value name="NUMBER">
+                                  <block type="logic_compare" id="21" inline="true">
+                                    <field name="OP">LT</field>
+                                    <value name="A">
+                                      <block type="sensor_object" id="22">
+                                        <field name="OBJECT">LEFTSIDE</field>
+                                      </block>
+                                    </value>
+                                    <value name="B">
+                                      <block type="math_number" id="23">
+                                        <field name="NUM">100</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="movement_forward" id="24"></block>
+                                </statement>
+                                <next>
+                                  <block type="controls_if" id="25" inline="false">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="26" inline="true">
+                                        <field name="OP">EQ</field>
+                                        <value name="A">
+                                          <block type="sensor_object" id="27">
+                                            <field name="OBJECT">LEFTSIDE</field>
+                                          </block>
+                                        </value>
+                                        <value name="B">
+                                          <block type="math_number" id="28">
+                                            <field name="NUM">100</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                    <statement name="DO0">
+                                      <block type="movement_forward" id="29">
+                                        <next>
+                                          <block type="robot_delay" id="30" inline="true">
+                                            <value name="DELAY">
+                                              <block type="math_number" id="31">
+                                                <field name="NUM">1500</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="movement_left" id="32">
+                                                <next>
+                                                  <block type="robot_delay" id="33" inline="true">
+                                                    <value name="DELAY">
+                                                      <block type="math_number" id="34">
+                                                        <field name="NUM">1400</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="movement_forward" id="35"></block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
                 <next>
-                  <block type="controls_if" id="8" inline="false">
+                  <block type="controls_if" id="111" inline="false">
                     <value name="IF0">
-                      <block type="logic_operation" id="9" inline="true">
-                        <field name="OP">LAND</field>
+                      <block type="logic_compare" id="36" inline="true">
+                        <field name="OP">LT</field>
                         <value name="A">
-                          <block type="logic_compare" id="10" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="11">
-                                <field name="VAR">A</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="12">
-                                <field name="NUM">100</field>
-                              </block>
-                            </value>
+                          <block type="variables_get" id="37">
+                            <field name="VAR">A</field>
                           </block>
                         </value>
                         <value name="B">
-                          <block type="logic_compare" id="13" inline="true">
-                            <field name="OP">LT</field>
-                            <value name="A">
-                              <block type="variables_get" id="14">
-                                <field name="VAR">Direction</field>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="math_number" id="15">
-                                <field name="NUM">1</field>
-                              </block>
-                            </value>
+                          <block type="math_number" id="38">
+                            <field name="NUM">100</field>
                           </block>
                         </value>
                       </block>
                     </value>
                     <statement name="DO0">
-                      <block type="movement_right" id="16">
+                      <block type="movement_left" id="39">
                         <next>
-                          <block type="robot_delay" id="17" inline="true">
+                          <block type="robot_delay" id="40" inline="true">
                             <value name="DELAY">
-                              <block type="math_number" id="18">
+                              <block type="math_number" id="41">
                                 <field name="NUM">1400</field>
                               </block>
                             </value>
                             <next>
-                              <block type="movement_forward" id="19">
+                              <block type="movement_forward" id="42">
                                 <next>
-                                  <block type="controls_whileUntil" id="20" inline="false">
+                                  <block type="controls_whileUntil" id="43" inline="false">
                                     <field name="MODE">WHILE</field>
                                     <value name="NUMBER">
-                                      <block type="logic_compare" id="21" inline="true">
+                                      <block type="logic_compare" id="44" inline="true">
                                         <field name="OP">LT</field>
                                         <value name="A">
-                                          <block type="sensor_object" id="22">
-                                            <field name="OBJECT">LEFTSIDE</field>
+                                          <block type="sensor_object" id="45">
+                                            <field name="OBJECT">RIGHTSIDE</field>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="math_number" id="23">
+                                          <block type="math_number" id="46">
                                             <field name="NUM">100</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <statement name="DO">
-                                      <block type="movement_forward" id="24"></block>
+                                      <block type="movement_forward" id="47"></block>
                                     </statement>
                                     <next>
-                                      <block type="controls_if" id="25" inline="false">
+                                      <block type="controls_if" id="48" inline="false">
                                         <value name="IF0">
-                                          <block type="logic_compare" id="26" inline="true">
+                                          <block type="logic_compare" id="49" inline="true">
                                             <field name="OP">EQ</field>
                                             <value name="A">
-                                              <block type="sensor_object" id="27">
-                                                <field name="OBJECT">LEFTSIDE</field>
+                                              <block type="sensor_object" id="50">
+                                                <field name="OBJECT">RIGHTSIDE</field>
                                               </block>
                                             </value>
                                             <value name="B">
-                                              <block type="math_number" id="28">
+                                              <block type="math_number" id="51">
                                                 <field name="NUM">100</field>
                                               </block>
                                             </value>
                                           </block>
                                         </value>
                                         <statement name="DO0">
-                                          <block type="movement_forward" id="29">
+                                          <block type="movement_forward" id="52">
                                             <next>
-                                              <block type="robot_delay" id="30" inline="true">
+                                              <block type="robot_delay" id="53" inline="true">
                                                 <value name="DELAY">
-                                                  <block type="math_number" id="31">
+                                                  <block type="math_number" id="54">
                                                     <field name="NUM">1500</field>
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="movement_left" id="32">
+                                                  <block type="movement_right" id="55">
                                                     <next>
-                                                      <block type="robot_delay" id="33" inline="true">
+                                                      <block type="robot_delay" id="56" inline="true">
                                                         <value name="DELAY">
-                                                          <block type="math_number" id="34">
+                                                          <block type="math_number" id="57">
                                                             <field name="NUM">1400</field>
                                                           </block>
                                                         </value>
                                                         <next>
-                                                          <block type="movement_forward" id="35">
+                                                          <block type="movement_forward" id="58">
                                                             <next>
-                                                              <block type="variables_set" id="174" inline="true">
-                                                                <field name="VAR">Direction</field>
-                                                                <value name="VALUE">
-                                                                  <block type="math_number" id="189">
-                                                                    <field name="NUM">2</field>
+                                                              <block type="robot_delay" id="59" inline="true">
+                                                                <value name="DELAY">
+                                                                  <block type="math_number" id="60">
+                                                                    <field name="NUM">4000</field>
                                                                   </block>
                                                                 </value>
                                                               </block>
@@ -170,153 +246,6 @@
                         </next>
                       </block>
                     </statement>
-                    <next>
-                      <block type="controls_if" id="111" inline="false">
-                        <value name="IF0">
-                          <block type="logic_operation" id="205" inline="true">
-                            <field name="OP">LAND</field>
-                            <value name="A">
-                              <block type="logic_compare" id="36" inline="true">
-                                <field name="OP">LT</field>
-                                <value name="A">
-                                  <block type="variables_get" id="37">
-                                    <field name="VAR">A</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="38">
-                                    <field name="NUM">100</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="logic_compare" id="247" inline="true">
-                                <field name="OP">EQ</field>
-                                <value name="A">
-                                  <block type="variables_get" id="265">
-                                    <field name="VAR">Direction</field>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <block type="math_number" id="278">
-                                    <field name="NUM">2</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                        <statement name="DO0">
-                          <block type="movement_left" id="39">
-                            <next>
-                              <block type="robot_delay" id="40" inline="true">
-                                <value name="DELAY">
-                                  <block type="math_number" id="41">
-                                    <field name="NUM">1400</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="movement_forward" id="42">
-                                    <next>
-                                      <block type="controls_whileUntil" id="43" inline="false">
-                                        <field name="MODE">WHILE</field>
-                                        <value name="NUMBER">
-                                          <block type="logic_compare" id="44" inline="true">
-                                            <field name="OP">LT</field>
-                                            <value name="A">
-                                              <block type="sensor_object" id="45">
-                                                <field name="OBJECT">RIGHTSIDE</field>
-                                              </block>
-                                            </value>
-                                            <value name="B">
-                                              <block type="math_number" id="46">
-                                                <field name="NUM">100</field>
-                                              </block>
-                                            </value>
-                                          </block>
-                                        </value>
-                                        <statement name="DO">
-                                          <block type="movement_forward" id="47"></block>
-                                        </statement>
-                                        <next>
-                                          <block type="controls_if" id="48" inline="false">
-                                            <value name="IF0">
-                                              <block type="logic_compare" id="49" inline="true">
-                                                <field name="OP">EQ</field>
-                                                <value name="A">
-                                                  <block type="sensor_object" id="50">
-                                                    <field name="OBJECT">RIGHTSIDE</field>
-                                                  </block>
-                                                </value>
-                                                <value name="B">
-                                                  <block type="math_number" id="51">
-                                                    <field name="NUM">100</field>
-                                                  </block>
-                                                </value>
-                                              </block>
-                                            </value>
-                                            <statement name="DO0">
-                                              <block type="movement_forward" id="52">
-                                                <next>
-                                                  <block type="robot_delay" id="53" inline="true">
-                                                    <value name="DELAY">
-                                                      <block type="math_number" id="54">
-                                                        <field name="NUM">1500</field>
-                                                      </block>
-                                                    </value>
-                                                    <next>
-                                                      <block type="movement_right" id="55">
-                                                        <next>
-                                                          <block type="robot_delay" id="56" inline="true">
-                                                            <value name="DELAY">
-                                                              <block type="math_number" id="57">
-                                                                <field name="NUM">1400</field>
-                                                              </block>
-                                                            </value>
-                                                            <next>
-                                                              <block type="movement_forward" id="58">
-                                                                <next>
-                                                                  <block type="robot_delay" id="59" inline="true">
-                                                                    <value name="DELAY">
-                                                                      <block type="math_number" id="60">
-                                                                        <field name="NUM">4000</field>
-                                                                      </block>
-                                                                    </value>
-                                                                    <next>
-                                                                      <block type="variables_set" id="61" inline="true">
-                                                                        <field name="VAR">Direction</field>
-                                                                        <value name="VALUE">
-                                                                          <block type="math_number" id="62">
-                                                                            <field name="NUM">0</field>
-                                                                          </block>
-                                                                        </value>
-                                                                      </block>
-                                                                    </next>
-                                                                  </block>
-                                                                </next>
-                                                              </block>
-                                                            </next>
-                                                          </block>
-                                                        </next>
-                                                      </block>
-                                                    </next>
-                                                  </block>
-                                                </next>
-                                              </block>
-                                            </statement>
-                                          </block>
-                                        </next>
-                                      </block>
-                                    </next>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </statement>
-                      </block>
-                    </next>
                   </block>
                 </next>
               </block>
