@@ -260,6 +260,11 @@
                                                           <block type="movement_forward" id="60">
                                                             <next>
                                                               <block type="robot_delay" id="113" inline="true">
+                                                                <value name="DELAY">
+                                                                  <block type="math_number" id="132">
+                                                                    <field name="NUM">3000</field>
+                                                                  </block>
+                                                                </value>
                                                                 <next>
                                                                   <block type="variables_set" id="61" inline="true">
                                                                     <field name="VAR">Direction</field>
@@ -300,8 +305,5 @@
         </statement>
       </block>
     </next>
-  </block>
-  <block type="math_number" id="132" x="384" y="1111">
-    <field name="NUM">3000</field>
   </block>
 </xml>
