@@ -75,7 +75,14 @@
                         <next>
                           <block type="movement_forward" id="15">
                             <next>
-                              <block type="movement_stop" id="123"></block>
+                              <block type="controls_whileUntil" id="161" inline="false">
+                                <field name="MODE">WHILE</field>
+                                <value name="NUMBER">
+                                  <block type="sensor_button" id="169">
+                                    <field name="OBJECT">UP</field>
+                                  </block>
+                                </value>
+                              </block>
                             </next>
                           </block>
                         </next>
