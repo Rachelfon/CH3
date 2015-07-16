@@ -27,38 +27,83 @@
               </block>
             </value>
             <next>
-              <block type="controls_if" id="17" inline="false">
+              <block type="controls_if" id="8" inline="false">
                 <value name="IF0">
-                  <block type="logic_compare" id="34" inline="true">
-                    <field name="OP">LT</field>
+                  <block type="logic_operation" id="47" inline="true">
+                    <field name="OP">LAND</field>
                     <value name="A">
-                      <block type="variables_get" id="21">
-                        <field name="VAR">A</field>
+                      <block type="logic_compare" id="9" inline="true">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="10">
+                            <field name="VAR">A</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="math_number" id="11">
+                            <field name="NUM">150</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                     <value name="B">
-                      <block type="math_number" id="41">
-                        <field name="NUM">150</field>
+                      <block type="logic_compare" id="54" inline="true">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="sensor_object" id="68">
+                            <field name="OBJECT">RIGHTFRONT</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="sensor_object" id="61">
+                            <field name="OBJECT">LEFTFRONT</field>
+                          </block>
+                        </value>
                       </block>
                     </value>
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block type="movement_right" id="58">
+                  <block type="movement_right" id="12">
                     <next>
-                      <block type="robot_delay" id="69" inline="true">
+                      <block type="robot_delay" id="13" inline="true">
                         <value name="DELAY">
-                          <block type="math_number" id="76">
+                          <block type="math_number" id="14">
                             <field name="NUM">1300</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="movement_forward" id="15">
+                            <next>
+                              <block type="controls_whileUntil" id="16" inline="false">
+                                <field name="MODE">UNTIL</field>
+                                <value name="NUMBER">
+                                  <block type="sensor_button" id="17">
+                                    <field name="OBJECT">UP</field>
+                                  </block>
+                                </value>
+                                <statement name="DO">
+                                  <block type="controls_if" id="24" inline="false">
+                                    <value name="IF0">
+                                      <block type="logic_compare" id="113" inline="true">
+                                        <field name="OP">GT</field>
+                                        <value name="A">
+                                          <block type="sensor_object" id="31">
+                                            <field name="OBJECT">LEFTSIDE</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </statement>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
                 </statement>
-                <next>
-                  <block type="movement_forward" id="86"></block>
-                </next>
               </block>
             </next>
           </block>
