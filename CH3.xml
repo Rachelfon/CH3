@@ -129,13 +129,22 @@
                                                         <next>
                                                           <block type="movement_forward" id="34">
                                                             <next>
-                                                              <block type="variables_set" id="35" inline="true">
-                                                                <field name="VAR">Direction</field>
-                                                                <value name="VALUE">
-                                                                  <block type="math_number" id="36">
-                                                                    <field name="NUM">2</field>
+                                                              <block type="robot_delay" id="64" inline="true">
+                                                                <value name="DELAY">
+                                                                  <block type="math_number" id="111">
+                                                                    <field name="NUM">1500</field>
                                                                   </block>
                                                                 </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="35" inline="true">
+                                                                    <field name="VAR">Direction</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="math_number" id="36">
+                                                                        <field name="NUM">2</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
                                                               </block>
                                                             </next>
                                                           </block>
@@ -250,13 +259,22 @@
                                                         <next>
                                                           <block type="movement_forward" id="60">
                                                             <next>
-                                                              <block type="variables_set" id="61" inline="true">
-                                                                <field name="VAR">Direction</field>
-                                                                <value name="VALUE">
-                                                                  <block type="math_number" id="62">
-                                                                    <field name="NUM">0</field>
+                                                              <block type="robot_delay" id="113" inline="true">
+                                                                <value name="DELAY">
+                                                                  <block type="math_number" id="132">
+                                                                    <field name="NUM">1500</field>
                                                                   </block>
                                                                 </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="61" inline="true">
+                                                                    <field name="VAR">Direction</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="math_number" id="62">
+                                                                        <field name="NUM">0</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
                                                               </block>
                                                             </next>
                                                           </block>
