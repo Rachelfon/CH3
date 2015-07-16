@@ -55,7 +55,7 @@
                           </block>
                         </value>
                         <value name="B">
-                          <block type="sensor_object" id="48">
+                          <block type="sensor_object" id="15">
                             <field name="OBJECT">LEFTFRONT</field>
                           </block>
                         </value>
@@ -86,15 +86,15 @@
                                   <block type="controls_if" id="22" inline="false">
                                     <value name="IF0">
                                       <block type="logic_compare" id="23" inline="true">
-                                        <field name="OP">EQ</field>
+                                        <field name="OP">GT</field>
                                         <value name="A">
                                           <block type="sensor_object" id="24">
-                                            <field name="OBJECT">REAR</field>
+                                            <field name="OBJECT">LEFTSIDE</field>
                                           </block>
                                         </value>
                                         <value name="B">
                                           <block type="math_number" id="25">
-                                            <field name="NUM">100</field>
+                                            <field name="NUM">80</field>
                                           </block>
                                         </value>
                                       </block>
