@@ -85,26 +85,26 @@
                                 <statement name="DO">
                                   <block type="controls_if" id="22" inline="false">
                                     <value name="IF0">
-                                      <block type="logic_compare" id="45" inline="true">
+                                      <block type="logic_compare" id="23" inline="true">
                                         <field name="OP">EQ</field>
                                         <value name="A">
-                                          <block type="sensor_object" id="23">
+                                          <block type="sensor_object" id="24">
                                             <field name="OBJECT">LEFTSIDE</field>
                                           </block>
                                         </value>
                                         <value name="B">
-                                          <block type="math_number" id="52">
+                                          <block type="math_number" id="25">
                                             <field name="NUM">100</field>
                                           </block>
                                         </value>
                                       </block>
                                     </value>
                                     <statement name="DO0">
-                                      <block type="movement_left" id="62">
+                                      <block type="movement_left" id="26">
                                         <next>
-                                          <block type="robot_delay" id="64" inline="true">
+                                          <block type="robot_delay" id="27" inline="true">
                                             <value name="DELAY">
-                                              <block type="math_number" id="77">
+                                              <block type="math_number" id="28">
                                                 <field name="NUM">1400</field>
                                               </block>
                                             </value>
