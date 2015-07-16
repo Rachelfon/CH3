@@ -1,31 +1,69 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="1" x="102" y="86"></block>
-  <block type="controls_whileUntil" id="9" inline="false" x="78" y="131">
-    <field name="MODE">UNTIL</field>
-    <value name="NUMBER">
-      <block type="sensor_button" id="28">
-        <field name="OBJECT">UP</field>
-      </block>
-    </value>
-    <statement name="DO">
-      <block type="variables_set" id="30" inline="true">
-        <field name="VAR">A</field>
-        <value name="VALUE">
-          <block type="math_arithmetic" id="37" inline="true">
-            <field name="OP">ADD</field>
-            <value name="A">
-              <block type="sensor_object" id="44">
-                <field name="OBJECT">LEFTFRONT</field>
-              </block>
-            </value>
-            <value name="B">
-              <block type="sensor_object" id="51">
-                <field name="OBJECT">RIGHTFRONT</field>
-              </block>
-            </value>
+  <block type="movement_forward" id="1" x="79" y="108">
+    <next>
+      <block type="controls_whileUntil" id="2" inline="false">
+        <field name="MODE">UNTIL</field>
+        <value name="NUMBER">
+          <block type="sensor_button" id="3">
+            <field name="OBJECT">UP</field>
           </block>
         </value>
+        <statement name="DO">
+          <block type="variables_set" id="4" inline="true">
+            <field name="VAR">A</field>
+            <value name="VALUE">
+              <block type="math_arithmetic" id="5" inline="true">
+                <field name="OP">ADD</field>
+                <value name="A">
+                  <block type="sensor_object" id="6">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="sensor_object" id="7">
+                    <field name="OBJECT">RIGHTFRONT</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="17" inline="false">
+                <value name="IF0">
+                  <block type="logic_compare" id="34" inline="true">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="21">
+                        <field name="VAR">A</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="41">
+                        <field name="NUM">150</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_right" id="58">
+                    <next>
+                      <block type="robot_delay" id="69" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="76">
+                            <field name="NUM">1300</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="movement_forward" id="86"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
       </block>
-    </statement>
+    </next>
   </block>
 </xml>
